@@ -1,0 +1,28 @@
+title:            Hooozer
+description:      Daft Punk::Daft Me
+url:              # Site url.
+baseurl:          # Base url. ( if use subdirectory-like URL )
+signoff:          Hooozer # Your name.
+disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+google_analytics_id: # set tracking, UA-XXXX-Y.
+
+links:
+  - name:         Blog
+    url:          http://hooozer.com
+    external:     true
+  - name:         Feed
+    url:          /feed.xml
+  # - name:         Email
+    # url:          mailto:rezoooh@gmail.com
+    # external:     true
+  # - name:         GitHub
+    # url:          http://github.com/hooozer/scribble
+    # external:     true
+  - name:         About
+    url:          /about
+
+pygments:         true
+permalink:        pretty
+markdown:         redcarpet
+redcarpet:
+  extensions:     [autolink, tables]
