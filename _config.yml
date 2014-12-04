@@ -7,9 +7,8 @@ disqus_shortname: # disqus comment thread for post header options. ( leave blank
 google_analytics_id: # set tracking, UA-XXXX-Y.
 
 links:
-  - name:         Blog
-    url:          http://hooozer.com
-    external:     true
+  - name:         Home
+    url:          /
   - name:         Feed
     url:          /feed.xml
   # - name:         Email
