@@ -3,7 +3,7 @@ description:      Daft Punk::Daft Me
 url:              # Site url.
 baseurl:          # Base url. ( if use subdirectory-like URL )
 signoff:          Hooozer # Your name.
-disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+disqus_shortname: hooozer# disqus comment thread for post header options. ( leave blank if unwanted. )
 google_analytics_id: # set tracking, UA-XXXX-Y.
 
 links:
