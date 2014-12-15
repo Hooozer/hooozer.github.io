@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Jekyll & GitHub Pages & Blog
-disqus: false
 ---
 
 ###前言###
