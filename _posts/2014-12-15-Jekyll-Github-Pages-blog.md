@@ -84,7 +84,7 @@ title: Jekyll & GitHub Pages & Blog
       创建后，该仓库的master分支的内容将自动地被托管。同样，放入网站文件即可。它的访问URL就是：
 
       ```
-      http://username.github.io。
+      http://username.github.io
       ```
 
 ##**三、如何在GitHub Pages上部署一个基于Jekyll的博客站点？**##
@@ -100,16 +100,23 @@ title: Jekyll & GitHub Pages & Blog
 
   打开Linux终端：
 
-  ```
   1）安装Jekyll
-     $ gem install jekyll
+
+  ```
+  $ gem install jekyll
+  ```
 
   2）用Jekyll命令创建一个网站
-     $ jekyll new myblog
+
+  ```
+  $ jekyll new myblog
+  ```
 
   3）运行网站
-     $ cd myblog
-     $ jekyll serve --watch #这个命令监视网站文件，可以进行热部署。
+
+  ```
+  $ cd myblog
+    $ jekyll serve --watch #这个命令监视网站文件，可以进行热部署。
   ```
 
   打开浏览器访问 localhost:4000 就可以看见一个原始Jekyll网站了。当然样子比较简陋。
@@ -225,9 +232,18 @@ http://username.github.io/project-name
 
 ```
 hooozer.com
-或者www.hooozer.com
-或者blog.hooozer.com
 ```
+或者
+
+```
+www.hooozer.com
+```
+或者
+
+```
+blog.hooozer.com
+```
+
 *记得 push 到 GitHub*
 
 **注意**：如果前面两种类型的域名都配置了，比如我，
