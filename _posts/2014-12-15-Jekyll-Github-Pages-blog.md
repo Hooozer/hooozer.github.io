@@ -128,6 +128,15 @@ title: Jekyll & GitHub Pages & Blog
 
   再在浏览器里刷新页面，就可以查看刚才新发布的文章了。
 
+  注意，如果你准备像我一样使用某个Jeykll主题的话，操作起来稍有不同：
+
+     1，首先你要下载该主题，解压（如果需要）并复制到比如上面的myblog目录。
+
+     2，一个Jekyll主题实质上就是一个较为复杂的Jekyll网站，它用到了许多样式设计组件，因此
+        在本地运行时需要安装额外的gem包，所以一般要在工作目录（myblog目录），执行如下命令：
+        bundle install
+        之后的操作就没什么不同了。
+
 ###2、用Git将网站推送到GitHub###
 
 登陆GitHub，新建一个仓库，命名形式：username.github.io
@@ -149,7 +158,7 @@ $ git init
 
 git init: 这命令会在当前目录生成一个 .git 目录，一般叫做git仓库。
 ```
-现在你可以在该目录下按照前面的方式，用 Jekyll 命令创建网站了，这里我直接把myblog目录拷贝进来。
+现在你可以在该目录下按照前面的方式，用Jekyll命令创建网站了，这里我直接把myblog目录拷贝进来。
 
 3）将myblog目录中的所有内容添加到创建的git仓库的暂存区。
 
@@ -167,13 +176,13 @@ $ git commit -m "First submit for myblog"
 后面的字符串内容是对这次提交动作的描述，可指明做了哪些修改。
 ```
 
-5）将当前分支的内容推送到远程仓库。
+5）将当前分支（仓库）的内容推送到远程仓库。
 
 ```
 $ git push
 
 这里省略了两个参数：
-  完整命令: git push origin/master
+  完整命令: git push origin master
   origin: 一个远程仓库如果被克隆到本地，那么GitHub默认它的别名为origin，它的本地仓库可
         通过这个别名引用自己。
         比如这里的origin就是下面这个远程仓库的别名:
@@ -190,7 +199,7 @@ http://username.github.io
 就可以见到你的网站了。
 
 另外，创建一个Project GitHub pages的步骤跟上面差不多，只需在项目所在仓库新建一个 gh-pages 分支，
-然后把网站文档放入该分支下即可。访问
+然后把网站文档push到 origin gh-pages 即可。访问
 
 ```
 http://username.github.io/project-name
@@ -230,7 +239,7 @@ http://username.github.io/project-name
 **添加CNAME记录**
 
 配置好上述的任意一种后，你必须在你的网站文档根目录里新建一个CNAME文件，
-内容是前面你为username.github.io 配置的域名（这里只能填写一个, 但在域名注册商那里你可以配置多个），比如：
+内容是前面你为 username.github.io 配置的域名，比如：
 
 ```
 hooozer.com
@@ -250,12 +259,13 @@ blog.hooozer.com
 
 **注意**：如果前面两种类型的域名都配置了，比如我，
 那么如果我的CNAME文件里填写的是hooozer.com，
-那么当我访问www/blog.hooozer.com 将会指向hooozer.com的解析（访问有些慢），浏览器的地址栏里总是hooozer.com
+那么当我访问www/blog.hooozer.com将会指向hooozer.com
+的解析（访问有些慢），浏览器的地址栏里总是hooozer.com
 
 如果我的CNAME文件里填写的是www/blog.hooozer.com，
-那么访问hooozer.com，将会指向www/blog.hooozer.com的解析（访问较快），浏览器的地址栏总是www/blog.hooozer.com
+那么访问hooozer.com，将会指向www/blog.hooozer.com 的解析（访问较快），浏览器的地址栏总是www/blog.hooozer.com
 
-另外，以后你如果为自己的某个项目创建了Project Pages 站点，比如demo-app, 那么现在通过
+另外，以后你如果为自己的某个项目创建了Project Pages站点，比如demo-app, 那么现在通过
 [www/blog.]hooozer.com/demo-app就可以访问demo-app的主页了。
 
 ##**四、更多资料**##
