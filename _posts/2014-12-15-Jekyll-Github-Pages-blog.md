@@ -97,7 +97,7 @@ title: Jekyll & GitHub Pages & Blog
 
 ###1、安装Jekyll并创建一个网站###
 
-  打开Linux终端：
+  打开终端：
 
   1）安装Jekyll
 
@@ -128,14 +128,36 @@ title: Jekyll & GitHub Pages & Blog
 
   再在浏览器里刷新页面，就可以查看刚才新发布的文章了。
 
-  注意，如果你准备像我一样使用某个Jeykll主题的话，操作起来稍有不同：
+通过上面的方式得到的网站，只能使用Jekyll默认的主题，而且相当简陋。
+你要想更漂亮要么自己开发制作，要么使用别人制作好的，我当然推荐后者了。
 
-     1，首先你要下载该主题，解压（如果需要）并复制到比如上面的myblog目录。
+要使用某个Jeykll主题的话，步骤如下：
 
-     2，一个Jekyll主题实质上就是一个较为复杂的Jekyll网站，它用到了许多样式设计组件，因此
-        在本地运行时需要安装额外的gem包，所以一般要在工作目录（myblog目录），执行如下命令：
-        bundle install
-        之后的操作就没什么不同了。
+打开终端:
+
+a. 新建一个目录，比如myblog2
+
+  ```
+  $ mkdir myblog2
+  ```
+b. 下载主题（包），解压（如果需要）并复制到myblog2目录。
+
+c. 一个Jekyll主题实质上就是一个已经编译好的Jekyll网站，只不过稍微复杂，
+  用到了许多样式设计组件。
+  因此，在本地运行时需要安装额外的gem(Jekyll也是一个gem，因此也会安装好)，
+  所以还要执行如下命令：
+
+  ```
+  $ cd myblog2
+  $ bundle install
+  ```
+
+e. 编译并以热部署的形式运行网站：
+
+  ```
+  $ jekyll serve --watch
+  ```
+f. 在myblog2/_posts目录下创建和编辑文章，保存, 在浏览器上访问网站并审视效果(该步骤可重复)。
 
 ###2、用Git将网站推送到GitHub###
 
@@ -150,24 +172,21 @@ title: Jekyll & GitHub Pages & Blog
 $ git clone https://github.com/username/username.github.io
 ```
 
-2）切换到username.github.io目录，并创建一个git仓库。
+2）切换到username.github.io目录。
 
 ```
 $ cd username.github.io
-$ git init
-
-git init: 这命令会在当前目录生成一个 .git 目录，一般叫做git仓库。
 ```
-现在你可以在该目录下按照前面的方式，用Jekyll命令创建网站了，这里我直接把myblog目录拷贝进来。
+现在你可以在该目录下按照前面的方式，用Jekyll命令创建网站了，这里我直接把myblog目录里的文件拷贝进来。
 
-3）将myblog目录中的所有内容添加到创建的git仓库的暂存区。
+3）将username.github.io目录里的所有内容添加到本地仓库的暂存区。
 
 ```
 $ git add .
 
 "."代表当前目录（所有的内容），这个命令相当于做一个预提交。
 ```
-4）提交暂存区的内容到git仓库（的当前分支），永久保存。
+4）提交暂存区的内容到本地仓库的当前分支（master分支），永久保存。
 
 ```
 $ git commit -m "First submit for myblog"
@@ -176,7 +195,7 @@ $ git commit -m "First submit for myblog"
 后面的字符串内容是对这次提交动作的描述，可指明做了哪些修改。
 ```
 
-5）将当前分支（仓库）的内容推送到远程仓库。
+5）将当前分支的内容推送到远程仓库的master分支。
 
 ```
 $ git push
@@ -184,11 +203,11 @@ $ git push
 这里省略了两个参数：
   完整命令: git push origin master
   origin: 一个远程仓库如果被克隆到本地，那么GitHub默认它的别名为origin，它的本地仓库可
-        通过这个别名引用自己。
+        通过这个别名连接自己。
         比如这里的origin就是下面这个远程仓库的别名:
         https://github.com/username/username.github.io
 
-  master: origin的master（主干）分支。
+  master: 远程仓库origin的master分支。
 ```
 
 上传成功后，大约过10-15分钟，访问
@@ -198,8 +217,8 @@ http://username.github.io
 ```
 就可以见到你的网站了。
 
-另外，创建一个Project GitHub pages的步骤跟上面差不多，只需在项目所在仓库新建一个 gh-pages 分支，
-然后把网站文档push到 origin gh-pages 即可。访问
+另外，创建一个Project GitHub pages的步骤跟上面差不多，只需在项目所在仓库新建一个gh-pages分支，
+然后把网站文档push到origin gh-pages即可。访问
 
 ```
 http://username.github.io/project-name
