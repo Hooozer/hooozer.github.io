@@ -14,9 +14,7 @@
         {{ content }}
         </section>
       </div>
-      {% if site.disqus_shortname and page.disqus != false %}
-        {% include disqus.html %}
-      {% endif %}
+      {% include duoshuo.html %}
       {% include links.html %}
     </div>
     {% include footer.html %}

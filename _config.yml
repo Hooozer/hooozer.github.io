@@ -1,10 +1,8 @@
-title:            Hooozer
-description:
+title:            Hooozer # Site's name
+description:      # About your site
 url:              # Site url.
 baseurl:          # Base url. ( if use subdirectory-like URL )
 signoff:          Hooozer # Your name.
-disqus_shortname: hooozer # disqus comment thread for post header options. ( leave blank if unwanted. )
-google_analytics_id: # set tracking, UA-XXXX-Y.
 
 links:
   - name:         Home
@@ -15,7 +13,7 @@ links:
     # url:          mailto:rezoooh@gmail.com
     # external:     true
   # - name:         GitHub
-    # url:          http://github.com/hooozer/scribble
+    # url:          http://github.com/hooozer
     # external:     true
   - name:         About
     url:          /about
