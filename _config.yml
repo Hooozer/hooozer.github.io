@@ -1,6 +1,6 @@
 title:            Hooozer # Site's name
 description:      # About your site
-url:              # Site url.
+url:              http://www.hooozer.com# Site url.
 baseurl:          # Base url. ( if use subdirectory-like URL )
 signoff:          Hooozer # Your name.
 
